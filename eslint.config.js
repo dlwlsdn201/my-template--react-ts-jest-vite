@@ -35,7 +35,14 @@ export default tseslint.config(
       'no-duplicate-case': 'error', // 같은 스코프에 존재하는 switch-case 구문들 중에서 중복되는 case 구문을 허용하지 않음. (See: https://eslint.org/docs/latest/rules/no-duplicate-case)
       'no-duplicate-imports': 'warn', // 같은 모듈로부터 import 하는 구문이 2개 이상 중복 작성되는 것을 경고함. (See: https://eslint.org/docs/latest/rules/no-duplicate-import)
       'no-unsafe-optional-chaining': 'error', // 안전하지 않은 옵셔널 체이닝 구문을 허용하지 않음. (See: https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining)
-      camelcase: ['error', { ignoreDestructing: true, ignoreImports: true }], // 카멜 케이스
+     camelcase: [
+        'error',
+        {
+          properties: true,
+          ignoreDestructuring: true,
+          ignoreImports: true,
+        },
+      ], // 카멜 케이스
       'default-case': 'warn', // case 구문에서 default 항목이 있는지에 대한 여부
       'no-var': 'error', // var 키워드 사용 시, 에러
       'no-param-reassign': 'error', // 파라미터에 직접 데이터 재할당 시, 에러
