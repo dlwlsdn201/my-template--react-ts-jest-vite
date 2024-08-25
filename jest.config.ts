@@ -62,19 +62,15 @@ const config: Config = {
   transform: {
     // Use babel-jest to transpile tests with the next/babel preset
     '^.+.(js|jsx)$': 'babel-jest',
-    // '^.+\\.tsx?$': 'babel-jest',
     '^.+.(ts|tsx)$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.app.json' }],
   },
   transformIgnorePatterns: ['^.+\\.module\\.(css|sass|scss)$', '/dist'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
-  // setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 
   moduleNameMapper: {
     '\\.(jpg|png|gif)$': '<rootDir>/src', // 이미지 파일 경로
     '\\.svg$': '<rootDir>/svgMockup.ts',
-    // 필요한 경우에 따라 다른 모듈도 추가할 수 있습니다.
     '\\.(css|less|scss)$': 'identity-obj-proxy',
-
     'lodash-es': 'lodash', // lodash es6 문법 오류 해결
 
     // jest 테스트 코드에서 ts alias paths 사용 하기 위한 설정
