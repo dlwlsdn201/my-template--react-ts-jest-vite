@@ -23,7 +23,12 @@
     "noUnusedLocals": true, // 사용되지 않은 변수 검사
     "noUnusedParameters": true, // 사용되지 않은 파라미터들 검사
     "noFallthroughCasesInSwitch": true,
-    "types": ["vite/client", "jest", "@testing-library/jest-dom"] // Vite, Jest, RTL 타입 추가
+    "types": [
+      "vite/client",
+      "jest",
+      "@testing-library/jest-dom",
+      "@jest/globals"
+    ] // Vite, Jest, RTL 타입 추가
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

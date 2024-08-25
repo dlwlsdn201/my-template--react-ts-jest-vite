@@ -24,3 +24,9 @@ node_modules/
 hs_err_pid*
 replay_pid*
 
+
+# Jest 
+coverage
+
+# configs
+.vscode
