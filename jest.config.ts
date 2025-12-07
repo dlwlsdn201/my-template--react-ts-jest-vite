@@ -22,6 +22,8 @@ const config: Config = {
       lines: 50, // 전체 코드 라인 중 테스트된 라인의 비율
       statements: 50, // 모든 종류의 문장 테스트 비율. (조건문, 일반 코드라인 포함)
     },
+    // 각 디렉토리별 커버리지 임계값 (해당 디렉토리에 파일이 있을 때만 적용됨)
+    // 현재 디렉토리들이 비어있어 경고가 발생할 수 있으나, 파일이 추가되면 자동으로 적용됨
     'src/shared': {
       branches: 60,
       functions: 60,
@@ -32,7 +34,7 @@ const config: Config = {
       branches: 60,
       functions: 60,
       lines: 60,
-      statements: -1, // 적용되지 않은 명령문이 3개 이상인 경우, jest 실패
+      statements: -1, // 적용되지 않은 명령문이 1개 이상인 경우, jest 실패
     },
     'src/app': {
       branches: 80,
